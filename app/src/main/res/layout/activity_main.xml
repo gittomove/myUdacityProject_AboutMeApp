@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="myName"
+            type="com.example.lesson2_aboutme.MyName">
+        </variable>
+    </data>
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/newStyleCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={myName.name}"
+        android:textAlignment="center"
+        tools:text="Hello World! It's Me - Maksat!"
+        />
+
+
+    <EditText
+        android:autofillHints="username"
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/et_hint_name"
+        android:textAlignment="center"
+        android:gravity="center"
+        style="@style/newStyleCustom"
+
+        />
+
+    <Button
+        android:id="@+id/btn_done"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+
+        android:fontFamily="@font/roboto"
+        android:text="@string/btn_done" />
+
+
+    <TextView
+        android:id="@+id/nickname_text"
+        style="@style/newStyleCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/layout_margin"
+        android:text="@{myName.nickname}"
+        tools:text="ThereShould be some NAME"
+        android:visibility="gone"
+        android:background="@color/colorAccent"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="@dimen/tv_name_size"
+        android:contentDescription="@string/name"
+        android:src="@drawable/ic_launcher_background"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/iv_start_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/yellow_start_mr"
+        android:contentDescription="@string/yellow_star_desc"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ScrollView
+        android:id="@+id/bir_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_bio"
+            style="@style/newStyleCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.1"
+            android:text="@string/bio" />
+    </ScrollView>
+
+</LinearLayout>
+</layout>

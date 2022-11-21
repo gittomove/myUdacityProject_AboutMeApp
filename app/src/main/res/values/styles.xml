@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NigerStyle">
+        <item name="android:fontFamily">@font/rufina_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="NigerStyleNew" parent="NigerStyle">
+        <item name="android:layout_margin">@dimen/tv_name_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="newStyleCustom" parent="NigerStyleNew">
+        <item name="android:fontFamily">@font/aleo_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
